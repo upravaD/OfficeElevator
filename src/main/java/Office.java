@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Office {
-    static int numberOfficeLevel = 10;
+    int numberOfficeLevel = 10;
     public static Object[][] officeBuilding = new Object[3][10];
 
     public Office() {
@@ -31,8 +31,6 @@ public class Office {
     }
 
     public void officePrint() {
-//        Elevator.takeHuman();
-
         for (int i = 0; i < officeBuilding[0].length; i++) {
             System.out.print(officeBuilding[0][i] + "  " + officeBuilding[1][i] + "  " + officeBuilding[2][i] + "\n");
         }

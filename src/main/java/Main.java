@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -15,22 +12,24 @@ public class Main {
         Elevator elevator = new Elevator();
 
         int floors = 1;
-//        while(floors < 11) {
-//
-//            System.out.println();
-//            System.out.println(floors + " floor");
-//            System.out.println("======================");
-//
-//            office.officeInit();
-//            office.officePrint();
-//            elevator.takeHuman();
-//
-//            floors++;
-//        }
+        while(floors < 21) {
 
-        for (int i = 0; i < new Random().nextInt(10); i++) {
-            Elevator.lift.add(new Human().desiredLevel);
+            System.out.println();
+            System.out.println(floors + " floor");
+            System.out.println("======================");
+
+            office.officeInit();
+            office.officePrint();
+
+            if (floors < 11) {
+                elevator.elevatorMoveUp();
+            } else {
+                elevator.elevatorMoveDown();
+            }
+            floors++;
+            if (floors == 20) {
+                break;
+            }
         }
-        System.out.println(Elevator.lift);
     }
 }
